@@ -1,0 +1,316 @@
+/* Manifesto Document CSS Template */
+
+/* Reset and base styles */
+* {
+  box-sizing: border-box;
+}
+
+/* Set background on html element */
+html {
+  background-color: #f8f9fa;
+  padding: 20px 0;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.5;
+  color: #2c3e50;
+}
+
+/* Main document container - removed since we're styling body directly */
+
+/* Handle Pandoc's default structure - apply container styles to body */
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 60px 80px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Override Pandoc's default styles */
+code {
+  white-space: pre-wrap !important;
+}
+
+span.smallcaps {
+  font-variant: small-caps !important;
+}
+
+span.underline {
+  text-decoration: underline !important;
+}
+
+div.column {
+  display: inline-block !important;
+  vertical-align: top !important;
+  width: 50% !important;
+}
+
+div.hanging-indent {
+  margin-left: 1.5em !important;
+  text-indent: -1.5em !important;
+}
+
+ul.task-list {
+  list-style: none !important;
+}
+
+/* Typography */
+h1 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1em;
+  color: #1a252f;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 1.5em;
+  margin-bottom: 0;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin-top: 1em;
+  margin-bottom: 0;
+  color: #34495e;
+  font-weight: 600;
+}
+
+h4, h5, h6 {
+  font-size: 1.2em;
+  margin-top: 1.2em;
+  margin-bottom: 0.6em;
+  color: #34495e;
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 1.2em;
+  text-align: justify;
+  hyphens: auto;
+}
+
+/* Lists */
+ul, ol {
+  margin-bottom: 1.2em;
+  padding-left: 2em;
+}
+
+li {
+  margin-bottom: 0.5em;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 4px solid #3498db;
+  margin: 1.5em 0;
+  padding: 1em 1.5em;
+  background-color: #f8f9fa;
+  font-style: italic;
+  color: #555;
+}
+
+blockquote p {
+  margin: 0;
+}
+
+/* Code blocks */
+pre {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 1em;
+  overflow-x: auto;
+  margin: 1.2em 0;
+}
+
+code {
+  background-color: #f4f4f4;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9em;
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  font-size: 0.9em;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Links */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Horizontal rules */
+hr {
+  border: none;
+  border-top: 2px solid #eee;
+  margin: 2em 0;
+}
+
+/* Images */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5em auto;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Print styles */
+@media print {
+  html {
+    background-color: white;
+    padding: 0;
+  }
+  
+  body {
+    box-shadow: none;
+    border-radius: 0;
+    padding: 40px;
+    max-width: none;
+    font-size: 12pt;
+  }
+  
+  h1 {
+    font-size: 24pt;
+    page-break-after: avoid;
+  }
+  
+  h2, h3, h4, h5, h6 {
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+  
+  p, li {
+    page-break-inside: avoid;
+  }
+  
+  blockquote {
+    page-break-inside: avoid;
+  }
+}
+
+/* Tablet styles */
+@media screen and (max-width: 1024px) {
+  body {
+    margin: 20px;
+    padding: 40px 60px;
+  }
+  
+  h1 {
+    font-size: 2.2em;
+  }
+  
+  h2 {
+    font-size: 1.6em;
+  }
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  html {
+    padding: 10px 0;
+  }
+  
+  body {
+    margin: 10px;
+    padding: 30px 25px;
+    border-radius: 0;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 1em;
+  }
+  
+  h2 {
+    font-size: 1.5em;
+  }
+  
+  h3 {
+    font-size: 1.3em;
+  }
+  
+  p {
+    text-align: left;
+  }
+  
+  pre {
+    padding: 0.8em;
+    font-size: 0.8em;
+  }
+  
+  table {
+    font-size: 0.8em;
+  }
+  
+  th, td {
+    padding: 8px 6px;
+  }
+}
+
+/* Small mobile styles */
+@media screen and (max-width: 480px) {
+  body {
+    margin: 5px;
+    padding: 20px 15px;
+  }
+  
+  h1 {
+    font-size: 1.8em;
+  }
+  
+  ul, ol {
+    padding-left: 1.5em;
+  }
+  
+  blockquote {
+    margin: 1em 0;
+    padding: 0.8em 1em;
+  }
+  
+  table {
+    font-size: 0.7em;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
