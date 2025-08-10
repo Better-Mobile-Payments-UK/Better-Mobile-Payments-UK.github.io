@@ -4,7 +4,7 @@ ubuntu-dependencies:
 	apt-get update -y
 	apt install -y pandoc
 
-index.html: index.md style.css
+index.html: README.md style.css
 	pandoc -o $@ --standalone --css=style.css $<
 
 clean:
